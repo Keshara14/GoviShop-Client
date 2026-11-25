@@ -1,7 +1,18 @@
 
-import Header from "../components/Header";
 import farmHero from "../images/farm-Hero.jpg"
+import BuyerHome from "./BuyerHome";
+import { useRole } from "../context/RoleContext";
+import { useNavigate } from "react-router-dom";
+import ProduceVisual from "../components/ProduceVisual";
+import StatIcon from "../components/StatIcon";
 function Home() {
+    const { role } = useRole();
+    const navigate = useNavigate();
+
+    if (role === "buyer") {
+        return <BuyerHome />;
+    }
+
     return (
         <div className="home-page">
 
@@ -24,7 +35,7 @@ function Home() {
                         with buyers through GoviShop.
                     </p>
 
-                    <button className="hero-button">
+                    <button className="hero-button" type="button" onClick={() => navigate("/create-listing")}>
                         + Create Listing
                     </button>
 
@@ -47,9 +58,7 @@ function Home() {
 
                 <div className="home-stat-card">
 
-                    <div className="stat-icon">
-                        🌱
-                    </div>
+                    <StatIcon type="listings" />
 
                     <div>
                         <p>Active Listings</p>
@@ -61,9 +70,7 @@ function Home() {
 
                 <div className="home-stat-card">
 
-                    <div className="stat-icon">
-                        💰
-                    </div>
+                    <StatIcon type="offers" />
 
                     <div>
                         <p>Pending Offers</p>
@@ -75,9 +82,7 @@ function Home() {
 
                 <div className="home-stat-card">
 
-                    <div className="stat-icon">
-                        🛒
-                    </div>
+                    <StatIcon type="sales" />
 
                     <div>
                         <p>Completed Sales</p>
@@ -89,9 +94,7 @@ function Home() {
 
                 <div className="home-stat-card">
 
-                    <div className="stat-icon">
-                        📈
-                    </div>
+                    <StatIcon type="earnings" />
 
                     <div>
                         <p>Total Earnings</p>
@@ -132,10 +135,7 @@ function Home() {
 
                         <div className="home-listing-card">
 
-                            <img
-                                src="/images/bell-pepper.jpg"
-                                alt="Bell Pepper"
-                            />
+                            <ProduceVisual name="Bell Pepper" className="product-icon" />
 
                             <div className="listing-info">
 
@@ -158,10 +158,7 @@ function Home() {
 
                         <div className="home-listing-card">
 
-                            <img
-                                src="/images/tomato.jpg"
-                                alt="Tomato"
-                            />
+                            <ProduceVisual name="Tomato" className="product-icon" />
 
                             <div className="listing-info">
 
@@ -184,10 +181,7 @@ function Home() {
 
                         <div className="home-listing-card">
 
-                            <img
-                                src="/images/green-chilli.jpg"
-                                alt="Green Chilli"
-                            />
+                            <ProduceVisual name="Green Chilli" className="product-icon" />
 
                             <div className="listing-info">
 
@@ -316,4 +310,3 @@ function Home() {
 }
 
 export default Home;
-

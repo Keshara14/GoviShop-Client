@@ -1,3 +1,5 @@
+import ProduceVisual from "../components/ProduceVisual";
+
 function Mylistings() {
     return (
         <div className="my-listings-section">
@@ -17,21 +19,14 @@ function Mylistings() {
             <div className="my-listings-container">
 
                 <div className="my-listing-card">
+                    <ProduceVisual name="Bell Pepper" className="my-listing-visual" />
 
                     <div className="listing-details">
+                        <span className="listing-category">Vegetables</span>
                         <h3>Bell Pepper</h3>
 
-                        <p>
-                            <strong>Quantity:</strong> 500 kg
-                        </p>
-
-                        <p>
-                            <strong>Price:</strong> Rs. 450 / kg
-                        </p>
-
-                        <p>
-                            <strong>Location:</strong> Ratnapura
-                        </p>
+                        <p>500 kg available · Ratnapura</p>
+                        <strong className="my-listing-price">Rs. 450 <small>/ kg</small></strong>
                     </div>
 
                     <div className="listing-actions">
@@ -48,21 +43,13 @@ function Mylistings() {
 
 
                 <div className="my-listing-card">
+                    <ProduceVisual name="Tomato" className="my-listing-visual" />
 
                     <div className="listing-details">
+                        <span className="listing-category">Vegetables</span>
                         <h3>Tomato</h3>
-
-                        <p>
-                            <strong>Quantity:</strong> 300 kg
-                        </p>
-
-                        <p>
-                            <strong>Price:</strong> Rs. 180 / kg
-                        </p>
-
-                        <p>
-                            <strong>Location:</strong> Colombo
-                        </p>
+                        <p>300 kg available · Colombo</p>
+                        <strong className="my-listing-price">Rs. 180 <small>/ kg</small></strong>
                     </div>
 
                     <div className="listing-actions">
