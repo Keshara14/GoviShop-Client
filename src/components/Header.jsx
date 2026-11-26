@@ -128,7 +128,7 @@ function Header() {
                             <button type="button" className="switch-role-button" onClick={switchRole}>
                                 {switchRoleLabel}
                             </button>
-                            <button type="button" className="switch-role-button" onClick={() => { logout(); navigate("/login", { replace: true }); }}>
+                            <button type="button" className="switch-role-button" onClick={() => { logout(); navigate("/", { replace: true }); }}>
                                 Log out
                             </button>
                             <div className="profile-download">

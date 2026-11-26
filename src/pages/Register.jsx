@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import Logo from "../components/Logo";
 
@@ -56,6 +56,9 @@ function Register() {
                 </aside>
 
                 <section className="register-form-panel">
+                    <Link to="/" className="auth-home-button">
+                        <span aria-hidden="true">←</span> Back to home
+                    </Link>
                     {step === 1 ? (
                         <>
                             <div className="register-form-heading">

@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext";
 import Logo from "../components/Logo";
-import ProduceVisual from "../components/ProduceVisual";
 
 const produceExamples = [
-    { name: "Bell Pepper", category: "Vegetables" },
-    { name: "Tomato", category: "Fresh produce" },
-    { name: "Green Chilli", category: "Seasonal crops" }
+    { name: "Bell Pepper", category: "Vegetables", image: "/images/produce/bell-pepper.jpg" },
+    { name: "Tomato", category: "Fresh produce", image: "/images/produce/tomato.jpg" },
+    { name: "Green Chilli", category: "Seasonal crops", image: "/images/produce/green-chilli.jpg" }
 ];
 
 function Landing() {
@@ -163,7 +162,13 @@ function Landing() {
                     <div className="product-grid">
                         {produceExamples.map((produce) => (
                             <article className="product-card" key={produce.name}>
-                                <ProduceVisual name={produce.name} />
+                                <img
+                                    className="product-photo"
+                                    src={produce.image}
+                                    alt={produce.name}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                                 <div className="product-info">
                                     <span className="product-category">{produce.category}</span>
                                     <h3>{produce.name}</h3>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useRole } from "../context/RoleContext";
 import { useAuth } from "../context/AuthContext";
 import Logo from "../components/Logo";
@@ -50,6 +50,9 @@ function Login() {
                 </aside>
 
                 <section className="login-form-panel">
+                    <Link to="/" className="auth-home-button">
+                        <span aria-hidden="true">←</span> Back to home
+                    </Link>
                     <div className="login-form-heading">
                         <span className="login-eyebrow">SIGN IN TO CONTINUE</span>
                         <h2>Welcome back</h2>
