@@ -204,13 +204,200 @@ const translations = {
     "Active buyers": "ක්‍රියාකාරී ගැනුම්කරුවන්",
     "Products listed": "ලැයිස්තුගත කළ නිෂ්පාදන",
     "Successful connections": "සාර්ථක සම්බන්ධතා",
+    "Change language": "භාෂාව වෙනස් කරන්න",
+    "Back to home": "මුල් පිටුවට යන්න",
+    "Log in": "පිවිසෙන්න",
+    "Get started": "ආරම්භ කරන්න",
+    "How it works": "එය ක්‍රියා කරන ආකාරය",
+    "Explore produce": "නිෂ්පාදන ගවේෂණය කරන්න",
+    "Main navigation": "ප්‍රධාන සංචාලනය",
+    "Open navigation menu": "සංචාලන මෙනුව විවෘත කරන්න",
+    "Close navigation menu": "සංචාලන මෙනුව වසන්න",
+    "LOCAL HARVESTS, DIRECT CONNECTIONS": "දේශීය අස්වැන්න, සෘජු සම්බන්ධතා",
+    "A better way to move from": "වඩා හොඳ ක්‍රමයක්",
+    "farm to market.": "ගොවිපළේ සිට වෙළඳපොළට.",
+    "Discover local produce, connect with farmers, and make offers directly through one simple marketplace.": "දේශීය අස්වැන්න සොයා, ගොවීන් සමඟ සම්බන්ධ වී, එක් සරල වෙළඳපොළක් හරහා සෘජුවම මිල ගණන් ඉදිරිපත් කරන්න.",
+    "Explore the marketplace": "වෙළඳපොළ ගවේෂණය කරන්න",
+    "A simpler connection between growers and buyers": "වගාකරුවන් සහ ගැනුම්කරුවන් අතර වඩාත් සරල සම්බන්ධතාවයක්",
+    "GOVISHOP MARKETPLACE": "GOVISHOP වෙළඳපොළ",
+    "Good produce. Closer connections.": "හොඳ අස්වැන්නක්. වඩා සමීප සම්බන්ධතා.",
+    "From local farms": "දේශීය ගොවිපළවලින්",
+    "HOW IT WORKS": "ක්‍රියා කරන ආකාරය",
+    "Three simple steps to get started": "ආරම්භ කිරීමට සරල පියවර තුනක්",
+    "Bring your harvest to market or find produce for your business.": "ඔබේ අස්වැන්න වෙළඳපොළට ගෙන එන්න, නැතහොත් ඔබේ ව්‍යාපාරයට අවශ්‍ය නිෂ්පාදන සොයා ගන්න.",
+    "Farmers create a listing": "ගොවීන් නිෂ්පාදන ලැයිස්තුවක් සාදයි",
+    "Add your crop, quantity, location, and asking price to reach interested buyers.": "උනන්දුවක් දක්වන ගැනුම්කරුවන් වෙත ළඟා වීමට ඔබේ බෝගය, ප්‍රමාණය, ස්ථානය සහ ඉල්ලන මිල ඇතුළත් කරන්න.",
+    "Buyers make an offer": "ගැනුම්කරුවන් මිල ගණනක් ඉදිරිපත් කරයි",
+    "Explore produce listings and send an offer with the price and quantity you need.": "නිෂ්පාදන ලැයිස්තු ගවේෂණය කර ඔබට අවශ්‍ය මිල සහ ප්‍රමාණය සඳහන් කර මිල ගණනක් යවන්න.",
+    "Farmers review bids": "ගොවීන් ලංසු සමාලෝචනය කරයි",
+    "Compare incoming offers and accept or reject bids from your farmer workspace.": "ලැබෙන මිල ගණන් සසඳා ඔබේ ගොවි වැඩපොළෙන් ලංසු පිළිගන්න හෝ ප්‍රතික්ෂේප කරන්න.",
+    "WHY GOVISHOP": "GOVISHOP තෝරාගන්නේ ඇයි",
+    "A more direct way to trade": "වෙළඳාම් කිරීමට වඩාත් සෘජු ක්‍රමයක්",
+    "Purpose-built tools make everyday produce trading easier to manage.": "විශේෂයෙන් නිර්මාණය කළ මෙවලම් දෛනික නිෂ්පාදන වෙළඳාම පහසුවෙන් කළමනාකරණය කිරීමට උපකාරී වේ.",
+    "For farmers": "ගොවීන් සඳහා",
+    "Showcase your harvest, set your terms, and manage buyer offers in one place.": "ඔබේ අස්වැන්න ප්‍රදර්ශනය කර, ඔබේ කොන්දේසි නියම කර, ගැනුම්කරුවන්ගේ මිල ගණන් එකම තැනක කළමනාකරණය කරන්න.",
+    "For buyers": "ගැනුම්කරුවන් සඳහා",
+    "Find local produce and send a clear offer that fits your order.": "දේශීය නිෂ්පාදන සොයා ඔබේ ඇණවුමට ගැළපෙන පැහැදිලි මිල ගණනක් යවන්න.",
+    "Direct connections": "සෘජු සම්බන්ධතා",
+    "Keep listings and bids together, from the first offer to the farmer's decision.": "පළමු මිල ගණනේ සිට ගොවියාගේ තීරණය දක්වා ලැයිස්තු සහ ලංසු එකට තබා ගන්න.",
+    "EXPLORE THE MARKETPLACE": "වෙළඳපොළ ගවේෂණය කරන්න",
+    "Fresh produce, direct from growers": "වගාකරුවන්ගෙන් සෘජුවම නැවුම් නිෂ්පාදන",
+    "These are examples of the crops you can discover from local farmers.": "දේශීය ගොවීන්ගෙන් ඔබට සොයාගත හැකි බෝග කිහිපයක උදාහරණ මෙන්න.",
+    "Fresh produce": "නැවුම් නිෂ්පාදන",
+    "Seasonal crops": "කාලීන බෝග",
+    "Bell Pepper": "මාළු මිරිස්",
+    "Tomato": "තක්කාලි",
+    "Green Chilli": "අමු මිරිස්",
+    "Explore local listings and make an offer directly.": "දේශීය ලැයිස්තු ගවේෂණය කර සෘජුවම මිල ගණනක් ඉදිරිපත් කරන්න.",
+    "YOUR NEXT HARVEST STARTS HERE": "ඔබේ මීළඟ අස්වැන්න මෙතැනින් ඇරඹේ",
+    "Ready to connect?": "සම්බන්ධ වීමට සූදානම්ද?",
+    "Join GoviShop as a farmer or buyer and start exploring the marketplace.": "ගොවියෙකු හෝ ගැනුම්කරුවෙකු ලෙස GoviShop සමඟ එක් වී වෙළඳපොළ ගවේෂණය අරඹන්න.",
+    "Connecting local harvests with the people who need them.": "දේශීය අස්වැන්න අවශ්‍ය පුද්ගලයන් සමඟ සම්බන්ධ කිරීම.",
+    "GoviShop home": "GoviShop මුල් පිටුව",
+    "GoviShop leaf logo": "GoviShop පත්‍ර ලාංඡනය",
+    "Change language · සිංහල": "භාෂාව වෙනස් කරන්න · සිංහල",
+    "Change language · Sinhala": "භාෂාව වෙනස් කරන්න · සිංහල",
+    "Change language · English": "භාෂාව වෙනස් කරන්න · ඉංග්‍රීසි",
+    "FARMER WORKSPACE": "ගොවි වැඩපොළ",
+    "BUYER WORKSPACE": "ගැනුම්කරු වැඩපොළ",
+    "Received Bids": "ලැබුණු ලංසු",
+    "My Bids": "මගේ ලංසු",
+    "Review offers from buyers and decide which bids to accept.": "ගැනුම්කරුවන්ගේ මිල ගණන් සමාලෝචනය කර පිළිගත යුතු ලංසු තීරණය කරන්න.",
+    "Track the offers you have placed on farmer listings.": "ගොවි ලැයිස්තු සඳහා ඔබ ඉදිරිපත් කළ මිල ගණන් නිරීක්ෂණය කරන්න.",
+    "Loading bids...": "ලංසු පූරණය වෙමින්...",
+    "No bids to show yet.": "පෙන්වීමට තවම ලංසු නැත.",
+    "Listing": "ලැයිස්තුව",
+    "kg at Rs.": "කි.ග්‍රෑ.කට රු.",
+    "/ kg · Total Rs.": "/ කි.ග්‍රෑ. · මුළු එකතුව රු.",
+    "Buyer:": "ගැනුම්කරු:",
+    "Placed": "යොමු කළේ",
+    "pending": "පොරොත්තුවෙන්",
+    "accepted": "පිළිගත්",
+    "rejected": "ප්‍රතික්ෂේප කළ",
+    "Accept": "පිළිගන්න",
+    "Reject": "ප්‍රතික්ෂේප කරන්න",
+    "Loading your listings...": "ඔබේ ලැයිස්තු පූරණය වෙමින්...",
+    "You haven't created any listings yet.": "ඔබ තවමත් ලැයිස්තු කිසිවක් සාදා නැත.",
+    "Local farm": "දේශීය ගොවිපළ",
+    "Place a Bid": "ලංසුවක් ඉදිරිපත් කරන්න",
+    "Close Bid Form": "ලංසු පෝරමය වසන්න",
+    "Bid submitted successfully.": "ලංසුව සාර්ථකව ඉදිරිපත් කරන ලදී.",
+    "Offer price per kg": "කි.ග්‍රෑ. එකක මිල ගණන",
+    "Message": "පණිවිඩය",
+    "Total offer:": "මුළු මිල ගණන:",
+    "Submitting...": "ඉදිරිපත් කරමින්...",
+    "Submit Bid": "ලංසුව ඉදිරිපත් කරන්න",
+    "Loading listings...": "ලැයිස්තු පූරණය වෙමින්...",
+    "Unable to load listings": "ලැයිස්තු පූරණය කළ නොහැක",
+    "Unable to load listings. Please try again.": "ලැයිස්තු පූරණය කළ නොහැක. නැවත උත්සාහ කරන්න.",
+    "No listings are available yet.": "තවමත් ලැයිස්තු කිසිවක් නොමැත.",
+    "Please complete all required fields with positive values.": "කරුණාකර අවශ්‍ය සියලු ක්ෂේත්‍ර ධන අගයන් සමඟ සම්පූර්ණ කරන්න.",
+    "Unable to create listing": "ලැයිස්තුව සෑදිය නොහැක",
+    "Creating...": "සාදමින්...",
+    "Full name": "සම්පූර්ණ නම",
+    "Email": "විද්‍යුත් තැපෑල",
+    "Contact number": "දුරකථන අංකය",
+    "Alternative contact": "විකල්ප දුරකථන අංකය",
+    "Preferred contact": "කැමති සම්බන්ධතා ක්‍රමය",
+    "WhatsApp number": "WhatsApp අංකය",
+    "Product category": "නිෂ්පාදන කාණ්ඩය",
+    "Farm/business name": "ගොවිපළේ/ව්‍යාපාරයේ නම",
+    "Not provided": "සපයා නැත",
+    "Registration details": "ලියාපදිංචි විස්තර",
+    "These are the details saved when you created your GoviShop account.": "ඔබ GoviShop ගිණුම සාදන විට සුරැකි විස්තර මෙන්න.",
+    "YOUR ACCOUNT": "ඔබේ ගිණුම",
+    "Password": "මුරපදය",
+    "Signing in...": "පිවිසෙමින්...",
+    "Log out": "පිටවන්න",
+    "View account details": "ගිණුම් විස්තර බලන්න",
+    "Download GoviShop": "GoviShop බාගන්න",
+    "Install for Windows": "Windows සඳහා ස්ථාපනය කරන්න",
+    "Install for Android": "Android සඳහා ස්ථාපනය කරන්න",
+    "Open the browser menu and choose Install GoviShop or Install page as app.": "බ්‍රවුසර මෙනුව විවෘත කර Install GoviShop හෝ Install page as app තෝරන්න.",
+    "Open the browser menu and choose Install GoviShop or Add to Home Screen.": "බ්‍රවුසර මෙනුව විවෘත කර Install GoviShop හෝ Add to Home Screen තෝරන්න.",
+    "Windows app installation started.": "Windows යෙදුම ස්ථාපනය කිරීම ආරම්භ විය.",
+    "Android app installation started.": "Android යෙදුම ස්ථාපනය කිරීම ආරම්භ විය.",
+    "Profile menu": "පැතිකඩ මෙනුව",
+    "Mark all as read": "සියල්ල කියවූ ලෙස සලකුණු කරන්න",
+    "View all notifications": "සියලු දැනුම්දීම් බලන්න",
+    "New offer received": "නව මිල ගණනක් ලැබී ඇත",
+    "Green Harvest Traders offered Rs. 430 / kg for Bell Pepper.": "Green Harvest Traders මාළු මිරිස් කි.ග්‍රෑ. එකකට රු. 430ක මිලක් ඉදිරිපත් කළේය.",
+    "Listing viewed": "ලැයිස්තුව නරඹා ඇත",
+    "Your Tomato listing was viewed by a buyer.": "ගැනුම්කරුවෙකු ඔබේ තක්කාලි ලැයිස්තුව නරඹා ඇත.",
+    "10 minutes ago": "මිනිත්තු 10කට පෙර",
+    "1 hour ago": "පැයකට පෙර",
+    "GoviBot chat": "GoviBot සංවාදය",
+    "GoviShop Assistant": "GoviShop සහායක",
+    "Hi, I am GoviBot. How can I help you?": "ආයුබෝවන්, මම GoviBot. ඔබට උදව් කරන්නේ කෙසේද?",
+    "GoviBot is thinking...": "GoviBot සිතමින්...",
+    "Ask GoviBot something...": "GoviBot ගෙන් යමක් අසන්න...",
+    "Message GoviBot": "GoviBot වෙත පණිවිඩයක්",
+    "Send message": "පණිවිඩය යවන්න",
+    "Open GoviBot": "GoviBot විවෘත කරන්න",
+    "Close GoviBot": "GoviBot වසන්න",
+    "vegetables": "එළවළු",
+    "fruits": "පලතුරු",
+    "grains": "ධාන්‍ය",
+    "ratnapura": "රත්නපුර",
+    "colombo": "කොළඹ",
+    "kandy": "මහනුවර",
+    "tomato": "තක්කාලි",
+    "bell pepper": "මාළු මිරිස්",
+    "green chilli": "අමු මිරිස්",
+    "The backend server is not running. Start the server on port 5000 and try again.": "පසුබිම් සේවාදායකය ක්‍රියාත්මක නොවේ. සේවාදායකය 5000 තොටුවේ ආරම්භ කර නැවත උත්සාහ කරන්න.",
+    "Cannot reach the server. Start GoviShop backend on port 5000 and try again.": "GoviShop පසුබිම් සේවාදායකයට සම්බන්ධ විය නොහැක. 5000 තොටුවේ සේවාදායකය ආරම්භ කර නැවත උත්සාහ කරන්න.",
+    "Cannot reach GoviShop server on port 5000.": "5000 තොටුවේ ඇති GoviShop සේවාදායකයට සම්බන්ධ විය නොහැක.",
+    "Unable to log in": "පිවිසීමට නොහැක",
+    "Unable to create account": "ගිණුම සෑදීමට නොහැක",
+    "Request failed": "ඉල්ලීම අසාර්ථක විය",
+    "Authentication is required": "සත්‍යාපනය අවශ්‍ය වේ",
+    "Invalid authentication token": "සත්‍යාපන ටෝකනය වලංගු නොවේ",
+    "Authentication token has expired": "සත්‍යාපන ටෝකනය කල් ඉකුත් වී ඇත",
+    "Account no longer exists": "ගිණුම තවදුරටත් නොපවතී",
+    "Only farmers can perform this action": "මෙම ක්‍රියාව කළ හැක්කේ ගොවීන්ට පමණි",
+    "Only buyers can perform this action": "මෙම ක්‍රියාව කළ හැක්කේ ගැනුම්කරුවන්ට පමණි",
+    "All required account fields must be provided": "අවශ්‍ය සියලු ගිණුම් තොරතුරු ලබා දිය යුතුය",
+    "An account with that email or NIC already exists": "එම විද්‍යුත් තැපෑල හෝ ජාතික හැඳුනුම්පත් අංකය සහිත ගිණුමක් දැනටමත් ඇත",
+    "Account created successfully. Please log in.": "ගිණුම සාර්ථකව සාදන ලදී. කරුණාකර පිවිසෙන්න.",
+    "Failed to create account": "ගිණුම සෑදීම අසාර්ථක විය",
+    "Email and password are required": "විද්‍යුත් තැපෑල සහ මුරපදය අවශ්‍ය වේ",
+    "Invalid email or password": "විද්‍යුත් තැපෑල හෝ මුරපදය වැරදිය",
+    "Listing, offered price, and quantity are required": "ලැයිස්තුව, ඉදිරිපත් කරන මිල සහ ප්‍රමාණය අවශ්‍ය වේ",
+    "Message must be 500 characters or fewer": "පණිවිඩය අක්ෂර 500ක් හෝ ඊට අඩු විය යුතුය",
+    "Listing not found": "ලැයිස්තුව සොයාගත නොහැක",
+    "This listing is not linked to a farmer account yet": "මෙම ලැයිස්තුව තවමත් ගොවි ගිණුමකට සම්බන්ධ කර නැත",
+    "You cannot bid on your own listing": "ඔබට ඔබේම ලැයිස්තුවට ලංසු තැබිය නොහැක",
+    "Requested quantity exceeds the available quantity": "ඉල්ලූ ප්‍රමාණය ලබාගත හැකි ප්‍රමාණය ඉක්මවයි",
+    "This listing already has an accepted bid": "මෙම ලැයිස්තුවට දැනටමත් පිළිගත් ලංසුවක් ඇත",
+    "You already have a pending bid for this listing": "මෙම ලැයිස්තුව සඳහා ඔබට දැනටමත් පොරොත්තු ලංසුවක් ඇත",
+    "Failed to submit bid": "ලංසුව ඉදිරිපත් කිරීම අසාර්ථක විය",
+    "Failed to fetch your bids": "ඔබේ ලංසු ලබාගැනීම අසාර්ථක විය",
+    "Failed to fetch received bids": "ලැබුණු ලංසු ලබාගැනීම අසාර්ථක විය",
+    "A valid bid decision is required": "වලංගු ලංසු තීරණයක් අවශ්‍ය වේ",
+    "Bid not found": "ලංසුව සොයාගත නොහැක",
+    "You can only manage bids for your listings": "ඔබට කළමනාකරණය කළ හැක්කේ ඔබේ ලැයිස්තුවල ලංසු පමණි",
+    "This bid has already been decided": "මෙම ලංසුව පිළිබඳව දැනටමත් තීරණයක් ගෙන ඇත",
+    "Bid accepted successfully": "ලංසුව සාර්ථකව පිළිගන්නා ලදී",
+    "Bid rejected successfully": "ලංසුව සාර්ථකව ප්‍රතික්ෂේප කරන ලදී",
+    "Failed to update bid": "ලංසුව යාවත්කාලීන කිරීම අසාර්ථක විය",
+    "Failed to fetch listings": "ලැයිස්තු ලබාගැනීම අසාර්ථක විය",
+    "Failed to fetch your listings": "ඔබේ ලැයිස්තු ලබාගැනීම අසාර්ථක විය",
+    "Crop, category, location, quantity, and price are required": "බෝගය, කාණ්ඩය, ස්ථානය, ප්‍රමාණය සහ මිල අවශ්‍ය වේ",
+    "Listing created successfully": "ලැයිස්තුව සාර්ථකව සාදන ලදී",
+    "Failed to create listing": "ලැයිස්තුව සෑදීම අසාර්ථක විය",
+    "Please enter a message.": "කරුණාකර පණිවිඩයක් ඇතුළත් කරන්න.",
+    "Message must be 1000 characters or fewer.": "පණිවිඩය අක්ෂර 1000ක් හෝ ඊට අඩු විය යුතුය",
+    "GoviShop API is running": "GoviShop API ක්‍රියාත්මක වේ",
 };
 
-const reverseTranslations = Object.fromEntries(
-    Object.entries(translations).map(([english, sinhala]) => [sinhala, english]),
-);
+const textSources = new WeakMap();
+const attributeSources = new WeakMap();
 
 function translateText(value, language) {
+    if (language === "en") {
+        return value;
+    }
+
     const trimmedValue = value.trim();
     if (!trimmedValue) {
         return value;
@@ -218,11 +405,6 @@ function translateText(value, language) {
 
     const leadingWhitespace = value.slice(0, value.indexOf(trimmedValue));
     const trailingWhitespace = value.slice(value.indexOf(trimmedValue) + trimmedValue.length);
-
-    if (language === "en") {
-        const translated = reverseTranslations[trimmedValue];
-        return translated ? `${leadingWhitespace}${translated}${trailingWhitespace}` : value;
-    }
 
     const exact = translations[trimmedValue];
     if (exact) {
@@ -248,8 +430,14 @@ function translateDocument(language) {
     }
 
     textNodes.forEach((textNode) => {
-        const translated = translateText(textNode.nodeValue, language);
-        if (translated !== textNode.nodeValue) {
+        const currentValue = textNode.nodeValue;
+        const previous = textSources.get(textNode);
+        const sourceValue = previous && currentValue === previous.translated
+            ? previous.source
+            : currentValue;
+        const translated = translateText(sourceValue, language);
+        textSources.set(textNode, { source: sourceValue, translated });
+        if (translated !== currentValue) {
             textNode.nodeValue = translated;
         }
     });
@@ -257,8 +445,21 @@ function translateDocument(language) {
     document.querySelectorAll("input[placeholder], textarea[placeholder], [aria-label], img[alt]").forEach((element) => {
         ["placeholder", "aria-label", "alt"].forEach((attribute) => {
             if (element.hasAttribute(attribute)) {
-                const value = element.getAttribute(attribute);
-                element.setAttribute(attribute, translateText(value, language));
+                let sources = attributeSources.get(element);
+                if (!sources) {
+                    sources = new Map();
+                    attributeSources.set(element, sources);
+                }
+                const currentValue = element.getAttribute(attribute);
+                const previous = sources.get(attribute);
+                const sourceValue = previous && currentValue === previous.translated
+                    ? previous.source
+                    : currentValue;
+                const translated = translateText(sourceValue, language);
+                sources.set(attribute, { source: sourceValue, translated });
+                if (translated !== currentValue) {
+                    element.setAttribute(attribute, translated);
+                }
             }
         });
     });
@@ -272,7 +473,13 @@ export function LanguageProvider({ children }) {
         translateDocument(language);
 
         const observer = new MutationObserver(() => translateDocument(language));
-        observer.observe(document.body, { childList: true, subtree: true });
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ["aria-label", "alt", "placeholder"],
+            characterData: true,
+            childList: true,
+            subtree: true,
+        });
 
         return () => observer.disconnect();
     }, [language]);

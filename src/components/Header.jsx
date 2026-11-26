@@ -100,6 +100,12 @@ function Header() {
         navigate("/login", { state: { role: nextRole } });
     };
 
+    const handleLogout = () => {
+        setIsProfileOpen(false);
+        logout();
+        window.location.replace("/");
+    };
+
     return (
         <header className="top-bar" ref={accountRef}>
             <div className="top-bar-identity">
@@ -128,7 +134,7 @@ function Header() {
                             <button type="button" className="switch-role-button" onClick={switchRole}>
                                 {switchRoleLabel}
                             </button>
-                            <button type="button" className="switch-role-button" onClick={() => { logout(); navigate("/", { replace: true }); }}>
+                            <button type="button" className="switch-role-button" onClick={handleLogout}>
                                 Log out
                             </button>
                             <div className="profile-download">
