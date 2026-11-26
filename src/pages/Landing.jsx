@@ -1,114 +1,60 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext";
 import Logo from "../components/Logo";
 import ProduceVisual from "../components/ProduceVisual";
 
-const stats = [
-    { value: 1250, label: "Farmers joined" },
-    { value: 860, label: "Active buyers" },
-    { value: 3400, label: "Products listed" },
-    { value: 2100, label: "Successful connections" },
+const produceExamples = [
+    { name: "Bell Pepper", category: "Vegetables" },
+    { name: "Tomato", category: "Fresh produce" },
+    { name: "Green Chilli", category: "Seasonal crops" }
 ];
 
-function CommunityStats() {
-    const sectionRef = useRef(null);
-    const [hasStarted, setHasStarted] = useState(false);
-    const [counts, setCounts] = useState(stats.map(() => 0));
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setHasStarted(true);
-                observer.disconnect();
-            }
-        }, { threshold: 0.3 });
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
-    useEffect(() => {
-        if (!hasStarted) {
-            return undefined;
-        }
-
-        const startTime = performance.now();
-        const duration = 1800;
-        let animationFrame;
-
-        const animate = (currentTime) => {
-            const progress = Math.min((currentTime - startTime) / duration, 1);
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
-            setCounts(stats.map((stat) => Math.floor(stat.value * easedProgress)));
-
-            if (progress < 1) {
-                animationFrame = requestAnimationFrame(animate);
-            }
-        };
-
-        animationFrame = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(animationFrame);
-    }, [hasStarted]);
-
-    return (
-        <section ref={sectionRef} className="landing-section community-stats-section">
-            <div className="section-title">
-                <p>OUR GROWING COMMUNITY</p>
-                <h2>Growing together, from farm to market.</h2>
-                <span>Trusted by farmers and buyers building a better agricultural marketplace.</span>
-            </div>
-
-            <div className="community-stats-grid">
-                {stats.map((stat, index) => (
-                    <div className="community-stat" key={stat.label}>
-                        <strong>{counts[index].toLocaleString()}+</strong>
-                        <span>{stat.label}</span>
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
-}
-
 function Landing() {
-    const navigate = useNavigate();
     const { language, toggleLanguage } = useLanguage();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    const handleProductClick = () => {
-        navigate("/register");
-    };
 
     return (
         <div className="landing-page">
             <header className="landing-navbar">
-                <Logo className="landing-logo" />
+                <Link to="/" className="landing-brand" aria-label="GoviShop home">
+                    <Logo className="landing-logo" />
+                </Link>
 
-                <nav className="landing-nav-links">
+                <nav className="landing-nav-links" aria-label="Main navigation">
                     <div className="landing-desktop-links">
-                        <a href="#products">Products</a>
-                        <a href="#about">About</a>
-                        <Link to="/login">Login</Link>
+                        <a href="#how-it-works">How it works</a>
+                        <a href="#products">Explore produce</a>
                     </div>
                     <div className="landing-mobile-menu">
                         <button
                             type="button"
                             className="landing-menu-button"
-                            aria-label="Open navigation menu"
+                            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                             aria-expanded={isMobileMenuOpen}
+                            aria-controls="landing-mobile-menu-panel"
                             onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
                         >
-                            ⋯
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                {isMobileMenuOpen
+                                    ? <path d="m6 6 12 12M18 6 6 18" />
+                                    : <path d="M4 7h16M4 12h16M4 17h16" />}
+                            </svg>
                         </button>
                         {isMobileMenuOpen && (
-                            <div className="landing-mobile-menu-panel">
-                                <a href="#products" onClick={() => setIsMobileMenuOpen(false)}>Products</a>
-                                <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-                                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
+                            <div className="landing-mobile-menu-panel" id="landing-mobile-menu-panel">
+                                <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>How it works</a>
+                                <a href="#products" onClick={() => setIsMobileMenuOpen(false)}>Explore produce</a>
+                                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>Log in</Link>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        toggleLanguage();
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                >
+                                    Change language · {language === "en" ? "සිංහල" : "English"}
+                                </button>
                             </div>
                         )}
                     </div>
@@ -118,105 +64,134 @@ function Landing() {
                         onClick={toggleLanguage}
                         aria-label="Change language"
                     >
-                        🌐 {language === "en" ? "සිංහල" : "English"}
+                        <span aria-hidden="true">🌐</span> {language === "en" ? "සිංහල" : "English"}
                     </button>
-                    <Link to="/register" className="signup-button">Sign Up</Link>
+                    <Link to="/login" className="landing-login-link">Log in</Link>
+                    <Link to="/register" className="signup-button">Get started</Link>
                 </nav>
             </header>
 
-            <section className="landing-hero">
-                <div className="hero-content">
-                    <p className="hero-label">FROM FARM TO MARKET</p>
-                    <h1>
-                        Fresh From
-                        <br />
-                        Farmers.
-                        <br />
-                        <span className="hero-final-line">Directly To The Market</span>
-                    </h1>
-                    <p className="hero-description">
-                        GoviShop connects farmers with buyers through a simple agricultural marketplace.
-                    </p>
-                    <div className="hero-buttons">
-                        <a href="#products" className="primary-button">Explore Products</a>
-                        <Link to="/register" className="secondary-button">Join GoviShop</Link>
+            <main>
+                <section className="landing-hero">
+                    <div className="hero-content">
+                        <p className="hero-label"><span aria-hidden="true" /> LOCAL HARVESTS, DIRECT CONNECTIONS</p>
+                        <h1>
+                            A better way to move from
+                            <span className="hero-final-line">farm to market.</span>
+                        </h1>
+                        <p className="hero-description">
+                            Discover local produce, connect with farmers, and make offers directly through one simple marketplace.
+                        </p>
+                        <div className="hero-buttons">
+                            <a href="#products" className="primary-button">Explore the marketplace <span aria-hidden="true">→</span></a>
+                            <Link to="/register" className="secondary-button">Join GoviShop</Link>
+                        </div>
+                        <p className="hero-assurance">
+                            <span aria-hidden="true">✓</span> A simpler connection between growers and buyers
+                        </p>
                     </div>
-                </div>
 
-                <a href="#about" className="scroll-indicator">
-                    ↓
-                    <span>Scroll to explore</span>
-                </a>
-            </section>
-
-            <section className="why-govishop" id="about">
-                <div className="section-title">
-                    <p>WHY GOVISHOP?</p>
-                    <h2>Connecting Agriculture More Directly</h2>
-                </div>
-
-                <div className="benefits-grid">
-                    <div className="benefit-card">
-                        <span>🌱</span>
-                        <h3>For Farmers</h3>
-                        <p>List your products and reach potential buyers directly.</p>
-                    </div>
-                    <div className="benefit-card">
-                        <span>🛒</span>
-                        <h3>For Buyers</h3>
-                        <p>Discover agricultural products from local farmers.</p>
-                    </div>
-                    <div className="benefit-card">
-                        <span>🤝</span>
-                        <h3>Direct Connections</h3>
-                        <p>Create better connections between farmers and agricultural buyers.</p>
-                    </div>
-                </div>
-            </section>
-
-            <CommunityStats />
-
-            <section className="landing-section" id="products">
-                <div className="section-title">
-                    <p>EXPLORE THE MARKET</p>
-                    <h2>Trending Products</h2>
-                    <span>Discover fresh agricultural products available from local farmers.</span>
-                </div>
-
-                <div className="product-grid">
-                    <div className="product-card" onClick={handleProductClick}>
-                        <ProduceVisual name="Bell Pepper" />
-                        <div className="product-info">
-                            <span className="product-category">Specialty Vegetable</span>
-                            <h3>Bell Pepper</h3>
-                            <p>Available from Ratnapura</p>
-                            <strong>Rs. 450 / kg</strong>
+                    <div className="hero-image">
+                        <img src="/images/farm-hero.jpg" alt="Green farmland and a home among the fields" />
+                        <div className="hero-image-caption">
+                            <span>GOVISHOP MARKETPLACE</span>
+                            <strong>Good produce. Closer connections.</strong>
+                        </div>
+                        <div className="hero-image-badge">
+                            <span aria-hidden="true">✦</span>
+                            From local farms
                         </div>
                     </div>
-                    <div className="product-card" onClick={handleProductClick}>
-                        <ProduceVisual name="Tomato" />
-                        <div className="product-info">
-                            <span className="product-category">Fresh Vegetable</span>
-                            <h3>Tomato</h3>
-                            <p>Available from Colombo</p>
-                            <strong>Rs. 180 / kg</strong>
-                        </div>
+                </section>
+
+                <section className="landing-section process-section" id="how-it-works">
+                    <div className="section-title">
+                        <p>HOW IT WORKS</p>
+                        <h2>Three simple steps to get started</h2>
+                        <span>Bring your harvest to market or find produce for your business.</span>
                     </div>
-                    <div className="product-card" onClick={handleProductClick}>
-                        <ProduceVisual name="Green Chilli" />
-                        <div className="product-info">
-                            <span className="product-category">Specialty Vegetable</span>
-                            <h3>Green Chilli</h3>
-                            <p>Available from Kandy</p>
-                            <strong>Rs. 250 / kg</strong>
-                        </div>
+                    <div className="process-grid">
+                        <article className="process-card">
+                            <span className="process-number">01</span>
+                            <h3>Farmers create a listing</h3>
+                            <p>Add your crop, quantity, location, and asking price to reach interested buyers.</p>
+                        </article>
+                        <article className="process-card">
+                            <span className="process-number">02</span>
+                            <h3>Buyers make an offer</h3>
+                            <p>Explore produce listings and send an offer with the price and quantity you need.</p>
+                        </article>
+                        <article className="process-card">
+                            <span className="process-number">03</span>
+                            <h3>Farmers review bids</h3>
+                            <p>Compare incoming offers and accept or reject bids from your farmer workspace.</p>
+                        </article>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                <section className="why-govishop" id="about">
+                    <div className="section-title">
+                        <p>WHY GOVISHOP</p>
+                        <h2>A more direct way to trade</h2>
+                        <span>Purpose-built tools make everyday produce trading easier to manage.</span>
+                    </div>
+                    <div className="benefits-grid">
+                        <article className="benefit-card">
+                            <span className="benefit-icon" aria-hidden="true">01</span>
+                            <h3>For farmers</h3>
+                            <p>Showcase your harvest, set your terms, and manage buyer offers in one place.</p>
+                        </article>
+                        <article className="benefit-card">
+                            <span className="benefit-icon" aria-hidden="true">02</span>
+                            <h3>For buyers</h3>
+                            <p>Find local produce and send a clear offer that fits your order.</p>
+                        </article>
+                        <article className="benefit-card">
+                            <span className="benefit-icon" aria-hidden="true">03</span>
+                            <h3>Direct connections</h3>
+                            <p>Keep listings and bids together, from the first offer to the farmer's decision.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section className="landing-section products-section" id="products">
+                    <div className="section-title">
+                        <p>EXPLORE THE MARKETPLACE</p>
+                        <h2>Fresh produce, direct from growers</h2>
+                        <span>These are examples of the crops you can discover from local farmers.</span>
+                    </div>
+                    <div className="product-grid">
+                        {produceExamples.map((produce) => (
+                            <article className="product-card" key={produce.name}>
+                                <ProduceVisual name={produce.name} />
+                                <div className="product-info">
+                                    <span className="product-category">{produce.category}</span>
+                                    <h3>{produce.name}</h3>
+                                    <p>Explore local listings and make an offer directly.</p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="landing-cta">
+                    <p className="cta-eyebrow">YOUR NEXT HARVEST STARTS HERE</p>
+                    <h2>Ready to connect?</h2>
+                    <p>Join GoviShop as a farmer or buyer and start exploring the marketplace.</p>
+                    <Link to="/register" className="primary-button">Create your account <span aria-hidden="true">→</span></Link>
+                </section>
+            </main>
 
             <footer className="landing-footer">
-                <Logo className="landing-footer-logo" />
-                <p>From Farm to Market</p>
+                <Link to="/" className="landing-brand" aria-label="GoviShop home">
+                    <Logo className="landing-footer-logo" light />
+                </Link>
+                <p>Connecting local harvests with the people who need them.</p>
+                <div className="landing-footer-links">
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#products">Explore produce</a>
+                    <Link to="/login">Log in</Link>
+                </div>
                 <span>© 2026 GoviShop</span>
             </footer>
         </div>
